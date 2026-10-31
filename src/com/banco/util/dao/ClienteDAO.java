@@ -181,4 +181,14 @@ public class ClienteDAO {
                 rs.getString("direccion"),
                 EstadoCliente.desdeEtiqueta(rs.getString("estado")));
     }
+    
+    private static final String SQL_DELETE = "DELETE FROM cliente WHERE id_cliente = ?";
+
+public int eliminar(int idCliente) throws SQLException {
+    try (Connection con = ConexionDB.getConexion();
+         PreparedStatement ps = con.prepareStatement(SQL_DELETE)) {
+        ps.setInt(1, idCliente);
+        return ps.executeUpdate();
+    }
+}
 }
