@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS banco_udb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE banco_udb;
 -- phpMyAdmin SQL Dump
 -- version 5.2.3
 -- https://www.phpmyadmin.net/
